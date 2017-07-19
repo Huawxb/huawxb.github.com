@@ -1,6 +1,3 @@
-/**
- * Created by k on 2017/1/8.
- */
 $(function(){
     $.ajax({
         type: "GET",
@@ -10,6 +7,7 @@ $(function(){
             data.about_info.forEach(function(item){
                 $("#about_info").append("<p>"+item+"</p>");
             });
+            
             $("#skill_info").append("<p>"+data.skill_info+"</p>");
             $(".skill_int").append("<ul></ul>");
             data.angularJs.forEach(function(item){
@@ -21,15 +19,13 @@ $(function(){
             data.css.forEach(function(item){
                 $("#skill_int3 ul").append("<li>"+item+"</li>");
             });
-            data.javaScript.forEach(function(item){
-                $("#skill_int4 ul").append("<li>"+item+"</li>");
-            });
-            $("#exp_info").append("<p>"+data.exp_info+"</p>");
+         
             data.contact_info.forEach(function(item){
                 $("#contact_info ul").append("<li>"+item+"</li>");
             });
         }
     });
+    
     $('#dowebok').fullpage({
         scrollingSpeed: 400,
         css3: true,
@@ -164,24 +160,24 @@ $(function(){
 });
 //顶部标题文字切换
 $("#header_p").mouseover(function(){
-    $("#header_p1").html("Defense");
-    $("#header_p2").html("前端工程师");
+    $("#header_p1").html("李化");
+    $("#header_p2").html("研发部");
 }).mouseout(function(){
-    $("#header_p1").html("F2E");
+    $("#header_p1").html("李化");
     $("#header_p2").html("转正答辩");
 });
 //顶部导航取消
-$("header nav a:not(':first')").click(function(evt){
-    console.log(evt);
-    if(evt.target.text==="积淀"){
-        window.open("http://blog.csdn.net/qq_26708777");
-    }else if(evt.target.text==="随笔"){
-        window.open("http://blog.csdn.net/qq_26708777");
-    }else if(evt.target.text==="关于"){
-        alert("正在努力建设中...请稍等");
-    }
-    return false;
-});
+//$("header nav a:not(':first')").click(function(evt){
+//    console.log(evt);
+//    if(evt.target.text==="积淀"){
+//        window.open("http://blog.csdn.net/qq_26708777");
+//    }else if(evt.target.text==="随笔"){
+//        window.open("http://blog.csdn.net/qq_26708777");
+//    }else if(evt.target.text==="关于"){
+//        alert("正在努力建设中...请稍等");
+//    }
+//    return false;
+//});
 //侧边导航文字切换
 $("aside a").hover(function(){
     $(this).find("b").fadeToggle(200,"easeInOutCubic");
@@ -208,6 +204,7 @@ $(".skill_icon").click(function(){
         $(this).siblings(".skill_flag").removeClass("skill_flag_scale");
     }
 });
+
 // 图片轮播
 $("#exp_list_slider").width($(".exp_list").width());
 $("#exp_list_content").width($(".exp_list").width()*3);
@@ -268,12 +265,7 @@ $("#exp_timeline a").mouseover(function(e){
 }).click(function(){
     return false;
 });
-// 点击留言
-$("#contact_message1").click(function(){
-    $(this).fadeOut(200,function(){
-        $("#contact_form").fadeIn(200);
-    })
-});
+
 ////内容适应居中
 $(function(){
     $("aside").css({"top":($(".active").height()-$("aside").height())/2});
