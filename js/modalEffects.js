@@ -1,8 +1,21 @@
+/**
+ * Created by k on 2017/1/8.
+ */
+/**
+ * modalEffects.js v1.0.0
+ * http://www.codrops.com
+ *
+ * Licensed under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ *
+ * Copyright 2013, Codrops
+ * http://www.codrops.com
+ */
 var ModalEffects = (function() {
 
     function init() {
 
-//        var overlay = document.querySelector( '.md-overlay' );
+        var overlay = document.querySelector( '.md-overlay' );
 
         [].slice.call( document.querySelectorAll( '.md-trigger' ) ).forEach( function( el, i ) {
 
@@ -58,8 +71,8 @@ var ModalEffects = (function() {
 
             el.addEventListener( 'click', function( ev ) {
                 classie.add( modal, 'md-show' );
-//                overlay.removeEventListener( 'click', removeModalHandler );
-//                overlay.addEventListener( 'click', removeModalHandler );
+                overlay.removeEventListener( 'click', removeModalHandler );
+                overlay.addEventListener( 'click', removeModalHandler );
 
                 if( classie.has( el, 'md-setperspective' ) ) {
                     setTimeout( function() {
