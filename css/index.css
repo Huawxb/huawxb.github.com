@@ -485,7 +485,7 @@ img#home_photo2 {
 }
 .skill_list_content {
     float: left;
-    margin: 0 8%;
+    margin: 0 12%;
     position: relative;
     height: 400px;
     visibility: hidden;
