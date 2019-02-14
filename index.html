@@ -1,6 +1,4 @@
 <!-- St. Valentine's Day 2019 programmed by Milo Yip -->
-<pre>
-    
 <html>
 
 <head>
@@ -12,11 +10,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 <meta name="format-detection" content="telephone=no" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-<style>
-body{font-size:62.5%;font-family:"Microsoft YaHei",Arial; overflow-x:hidden; overflow-y:auto;}
-.viewport{ max-width:640px; min-width:300px; margin:0 auto;}
-</style>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
 
 
 
@@ -49,8 +43,6 @@ function b64DecodeUnicode(str) { return decodeURIComponent(atob(str).split('').m
 var g = new Vector2(0, 100);
 var radius = 10;
 var restitution = 0.5;
-//var text = b64DecodeUnicode(window.location.search.substr(1) || 'TUlMTw==');
-//var text = '李化';
 var text = b64DecodeUnicode('SmluYQ==');
 var mass = 1;
 var kradius = 10;
@@ -263,10 +255,7 @@ function start() {
 }
 </script>
 </head>
-<body onload="start()" style="display:grid; height: 100%">
-    <div>
-        <canvas id="canvas1" width="512" height="512" style="margin: auto; height: 100%"></canvas>
-    </div>
+<body onload="start()" style="display:grid; height: 100%" >
+    <canvas id="canvas1" width="512" height="512" style="margin: auto; height: 50%"></canvas> 
 </body>
 </html>
-</pre>
