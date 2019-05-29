@@ -4,7 +4,7 @@
 <head>
 
 <meta charset="utf-8">
-<title>花蛤</title>
+<title>lw</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
@@ -12,8 +12,9 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
 
-
-
+<link rel="stylesheet" type="text/css" href="model/zeroModal.css" />
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script src="model/zeroModal.min.js"></script>
 <script type="text/javascript">
 Vector2 = function(x, y) { this.x = x; this.y = y; };
 Vector2.prototype = {
@@ -43,7 +44,7 @@ function b64DecodeUnicode(str) { return decodeURIComponent(atob(str).split('').m
 var g = new Vector2(0, 100);
 var radius = 10;
 var restitution = 0.5;
-var text = b64DecodeUnicode('SmluYQ==');
+var text = b64DecodeUnicode('6b6Z5ZOl');
 var mass = 1;
 var kradius = 10;
 var kradius2 = kradius * kradius;
@@ -252,10 +253,35 @@ function start() {
         t++;
     }
     loop();
+    setTimeout(
+        function _button() {
+            zeroModal.show({
+                title: '亲爱的龙哥：',
+                content: '巴拉巴拉，表白网页，做的怎么样。O(∩_∩)O',
+                width: '70%',
+                height: '20%',
+                left:'43px',
+                top:'15px',
+                buttons: [{
+                    className: 'zeromodal-btn zeromodal-btn-primary',
+                    name: '完美',
+                    fn: function(opt) {
+                        alert("龙哥给点意见，有红包！！！");
+                    }
+                }, {
+                    className: 'zeromodal-btn zeromodal-btn-default',
+                    name: '渣得一批',
+                    fn: function(opt) {
+                        alert("你妹的！！！");
+                    }
+                }]
+            });
+    },65000);
 }
 </script>
 </head>
 <body onload="start()" style="display:grid; height: 100%" >
     <canvas id="canvas1" width="512" height="512" style="margin: auto; height: 50%"></canvas> 
+
 </body>
 </html>
