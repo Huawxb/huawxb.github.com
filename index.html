@@ -5,7 +5,6 @@
 <meta charset="utf-8">
 <title>钟龙龙</title>
 
-<audio preload="auto" autoplay="true" loop="1"><source src="music\1-03 菊次郎的夏天.mp3"></audio>
 
 <!-- <embed src="music\1-03 菊次郎的夏天.mp3" autostart="true" loop="true" width="0" height="0" /> -->
 
@@ -19,6 +18,18 @@
 <script src="js/jquery-1.11.2.min.js"></script>
 <script src="model/zeroModal.min.js"></script>
 <script type="text/javascript">
+
+document.addEventListener('DOMContentLoaded', function () {
+    function audioAutoPlay() {
+        var audio = document.getElementById('audio');
+            audio.play();
+        document.addEventListener("WeixinJSBridgeReady", function () {
+            audio.play();
+        }, false);
+    }
+    audioAutoPlay();
+});
+
 Vector2 = function(x, y) { this.x = x; this.y = y; };
 Vector2.prototype = {
     len : function() { return Math.sqrt(this.x * this.x + this.y * this.y); },
@@ -284,9 +295,8 @@ function start() {
 </script>
 </head>
 <body onload="start()" style="display:grid; height: 100%" >
-    <canvas id="canvas1" width="512" height="512" style="margin: auto; height: 50%">
-        
-    </canvas> 
+    <audio id="audio" preload="auto" autoplay="true" loop="1"><source src="music\1-03 菊次郎的夏天.mp3"></audio>
+    <canvas id="canvas1" width="512" height="512" style="margin: auto; height: 50%"></canvas> 
 
 </body>
 </html>
