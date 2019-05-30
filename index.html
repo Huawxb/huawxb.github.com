@@ -17,9 +17,17 @@ $(document).ready(function(){
     audioAutoPlay('audio');
     function audioAutoPlay(id){
         var audio = document.getElementById(id);
-
         audio.addEventListener("playing", function(){
-            alert("music start ! ");
+            zeroModal.show({
+                title: 'hello world',
+                content: '开场加载测试',
+                ok: true,
+                okFn: function(opt) {
+                    alert('clicked ok and not close');
+                    start();
+                    return false;
+                }
+            });
         });
 
         audio.play();
@@ -29,7 +37,6 @@ $(document).ready(function(){
         audio.play();
         }, false);
     };
-});
 
 
 
@@ -295,9 +302,11 @@ function start() {
             });
     },65000);
 }
+
+});
 </script>
 </head>
-<body onload="start()" style="display:grid; height: 100%" >
+<body style="display:grid; height: 100%" >
     <audio id="audio" src="music/3831189082 2m.mp3" preload="auto" loop></audio>
     <canvas id="canvas1" width="512" height="512" style="margin: auto; height: 50%"></canvas> 
 </body>
