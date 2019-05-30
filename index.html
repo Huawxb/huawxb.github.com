@@ -18,17 +18,19 @@
 <script src="js/jquery-1.11.2.min.js"></script>
 <script src="model/zeroModal.min.js"></script>
 <script type="text/javascript">
+$(document).ready(function（）{
 
-document.addEventListener('DOMContentLoaded', function () {
-    function audioAutoPlay() {
-        var audio = document.getElementById('audio');
-            audio.play();
+    audioAutoPlay('audio');
+    function audioAutoPlay(id){
+        var audio = document.getElementById(id);
+        audio.play();
         document.addEventListener("WeixinJSBridgeReady", function () {
-            audio.play();
+        audio.play();
         }, false);
-    }
-    audioAutoPlay();
+    };
 });
+
+
 
 Vector2 = function(x, y) { this.x = x; this.y = y; };
 Vector2.prototype = {
