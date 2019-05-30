@@ -1,13 +1,7 @@
-<!-- St. Valentine's Day 2019 programmed by Milo Yip -->
 <html>
-
 <head>
 <meta charset="utf-8">
 <title>For 大头</title>
-
-
-<!-- <embed src="music\1-03 菊次郎的夏天.mp3" autostart="true" loop="true" width="0" height="0" /> -->
-
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
@@ -25,6 +19,7 @@ $(document).ready(function(){
         var audio = document.getElementById(id);
         audio.play();
         document.addEventListener("WeixinJSBridgeReady", function () {
+            alert("music start ! ");
         audio.play();
         }, false);
     };
