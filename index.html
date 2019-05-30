@@ -21,20 +21,21 @@ $(document).ready(function(){
             zeroModal.show({
                 title: 'hello world',
                 content: '开场加载测试',
+                width: '70%',
+                height: '20%',
+                left:'43px',
+                top:'15px',
                 ok: true,
                 okFn: function(opt) {
                     alert('clicked ok and not close');
                     start();
-                    return false;
+                    return true;
                 }
             });
         });
-
         audio.play();
         document.addEventListener("WeixinJSBridgeReady", function () {
-            alert("load!!!!");
-        audio.load();
-        audio.play();
+            audio.play();
         }, false);
     };
 
