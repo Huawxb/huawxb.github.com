@@ -17,7 +17,7 @@ $(document).ready(function(){
     audioAutoPlay('audio');
     function audioAutoPlay(id){
         var audio = document.getElementById(id);
-        audio.addEventListener("playing", function(){
+        audio.addEventListener("canplay", function(){
             zeroModal.show({
                 title: 'hello world',
                 content: '开场加载测试',
