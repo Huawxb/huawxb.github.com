@@ -17,12 +17,16 @@ $(document).ready(function(){
     audioAutoPlay('audio');
     function audioAutoPlay(id){
         var audio = document.getElementById(id);
+
+        audio.addEventListener("playing", function(){
+            alert("music start ! ");
+        });
+
         audio.play();
         document.addEventListener("WeixinJSBridgeReady", function () {
             alert("load!!!!");
         audio.load();
         audio.play();
-        alert("music start ! ");
         }, false);
     };
 });
