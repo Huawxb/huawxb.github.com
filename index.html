@@ -264,22 +264,22 @@ function start() {
         function _button() {
             zeroModal.show({
                 title: '亲爱的孙老师：',
-                content: '做我的女朋友吧，让我陪你一起去看世界的尽头。O(∩_∩)O',
+                content: '&nbsp&nbsp&nbsp&nbsp 做我的女朋友好吗，让我陪你一起去看世界的尽头。O(∩_∩)O <br> &nbsp&nbsp（手别抖，听完歌再点按钮）',
                 width: '70%',
-                height: '20%',
+                height: '21%',
                 left:'43px',
-                top:'15px',
+                top:'6px',
                 buttons: [{
                     className: 'zeromodal-btn zeromodal-btn-primary',
-                    name: '脸红答应',
+                    name: '好的！！',
                     fn: function(opt) {
-                        alert("六一Shopping,由师傅买单！！！");
+                        alert("开心，六一Shopping,由花蛤买单！！！");
                     }
                 }, {
                     className: 'zeromodal-btn zeromodal-btn-default',
-                    name: '残忍拒绝',
+                    name: '嘀，好人卡',
                     fn: function(opt) {
-                        alert("猿粪末到，谢谢大头两个月的陪伴。");
+                        history.back();
                     }
                 }]
             });
