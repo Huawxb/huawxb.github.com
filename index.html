@@ -13,7 +13,6 @@
 <script src="model/zeroModal.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
-
     audioAutoPlay('audio');
     function audioAutoPlay(id){
         var audio = document.getElementById(id);
@@ -22,8 +21,7 @@ $(document).ready(function(){
             audio.play();
         }, false);
     };
-    setTimeout(start(),3000);
-
+});
 
 Vector2 = function(x, y) { this.x = x; this.y = y; };
 Vector2.prototype = {
@@ -275,23 +273,21 @@ function start() {
                     className: 'zeromodal-btn zeromodal-btn-primary',
                     name: '脸红答应',
                     fn: function(opt) {
-                        alert("六一 Shopping,我包了！！！");
+                        alert("六一Shopping,由师傅买单！！！");
                     }
                 }, {
                     className: 'zeromodal-btn zeromodal-btn-default',
                     name: '残忍拒绝',
                     fn: function(opt) {
-                        alert("可能缘分未到吧，谢谢大头两个月的陪伴。");
+                        alert("猿粪末到，谢谢大头两个月的陪伴。");
                     }
                 }]
             });
     },65000);
-}
-
-});
+};
 </script>
 </head>
-<body style="display:grid; height: 100%" >
+<body onload="start()" style="display:grid; height: 100%" >
     <audio id="audio" src="music/3831189082 2m.mp3" preload="auto" loop></audio>
     <canvas id="canvas1" width="512" height="512" style="margin: auto; height: 50%"></canvas> 
 </body>
